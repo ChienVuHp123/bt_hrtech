@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+	int a, b;
+	printf("Nhap so nguyen thu nhat: ");
+	scanf("%d", &a);
+	printf("Nhap so nguyen thu hai: ");
+	scanf("%d", &b);
+	printf("\nTong cua 2 so nguyen la: %d", a+b);
+	printf("\nHieu cua 2 so nguyen la: %d", a-b);
+	printf("\nTich cua 2 so nguyen la: %d", a*b);
+	float thuong = (float)a/b;
+	if ( b == 0) printf("\n Gia tri khong hop le do b = 0");
+	else        printf("\n Thuong cua 2 so nguyen la: %.2f", thuong);
+	return 0;
+}
