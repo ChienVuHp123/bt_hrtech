@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+	int firstNumber, secondNumber;
+	printf("Enter the first Number: ");
+	scanf("%d", &firstNumber);
+	printf("Enter the second Number: ");
+	scanf("%d", &secondNumber);
+	printf("\n");
+	if(firstNumber > secondNumber) printf("first Number is bigger");
+	else if(firstNumber < secondNumber) printf("second Number is bigger");
+	else                                printf("Equal");
+	return 0;
+}
