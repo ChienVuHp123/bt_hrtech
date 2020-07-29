@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int check(float a, float b)
+{
+	if(a <= 0 || b <= 0) return 1;
+	else                 return 0;
+}
+int  main()
+{
+	float chieu_dai, chieu_rong;
+	printf("Nhap chieu dai: ");
+	scanf("%f", &chieu_dai);
+	printf("Nhap chieu rong: ");
+	scanf("%f", &chieu_rong);
+    int c = check(chieu_dai, chieu_rong);
+    if(c == 1) printf("Khong hop le moi nhap lai");
+    else
+    {
+	printf("Chu vi cua hinh chu nhat la: %.2f", (chieu_dai + chieu_rong) * 2);
+	printf("\nDien tich cua hinh chu nhat la: %.2f", chieu_dai * chieu_rong);
+	}
+	return 0;
+}
