@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	float a, b, c;
+	printf("Nhap canh thu nhat: ");
+	scanf("%f", &a);
+	printf("Nhap canh thu hai: ");
+	scanf("%f", &b);
+	printf("Nhap canh thu ba: ");
+	scanf("%f", &c);
+	if(a <= 0 || b <= 0 || c <= 0)
+	{
+		printf("khong hop le moi nhap lai");
+		exit(0);
+	}
+	if( a + b > c && a + c > b && b + c > a) printf("Day la 3 canh cua tam giac");
+	else                                        printf("Day khong phai la 3 canh cua tam giac");
+	return 0;
+}
