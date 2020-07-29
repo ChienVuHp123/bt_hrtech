@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int check(float a)
+{
+	if(a <= 0) return 1;
+	else                 return 0;
+}
+int  main()
+{
+	float R; // ban kinh duong tron
+	printf("Nhap ban kinh duong tron: ");
+	scanf("%f", &R);
+    int c = check(R);
+    if(c == 1) printf("Khong hop le moi nhap lai");
+    else
+    {
+	printf("Chu vi cua hinh tron la: %.2f", 2 * R * 3.14);
+	printf("\nDien tich cua hinh tron la: %.2f", 3.14 * R * R);
+	}
+	return 0;
+}
