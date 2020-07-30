@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+
+int main()
+{
+	printf("\tChuong trinh giai va bien luan phuong trinh ax+b = 0");
+	float a, b;
+	printf("\nMoi nhap gia tri a: ");
+	scanf("%f", &a);
+	printf("Moi nhap gia tri b: ");
+	scanf("%f", &b);
+	if(a != 0) printf("Phuong trinh co nghiem duy nhat la: %.2f", -b/a);
+	else 
+	{
+		if(b != 0) printf("Phuong trinh vo nghiem");
+		else       printf("Phuong trinh co nghiem voi moi gia tri x");
+	}
+	return 0;
+}
