@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+struct Node {
+	int data;
+	Node *nextNode;
+};
+Node* createNode(int value)
+{
+	Node* temp = new Node;
+	temp->data = value;
+	temp->nextNode = NULL;
+	return temp;
+}
+Node* addElement(Node* root, int value)
+{
+	Node* temp = createNode(value);
+	root->nextNode = temp;
+	return temp;
+}
+void PrintLinkList(Node *root)
+{
+	Node *temp = root;
+	while(temp != NULL)
+	{
+		cout << temp->data <<" ";
+		temp = temp->nextNode;
+	}
+}
+int main()
+{
+	FILE*ptr;
+	ptr = fopen("LinkList Data.txt", "r");
+	int n;
+	//cin >> n;
+	fscanf(ptr,"%d", &n);
+	int value;
+	//cin >> value;
+	fscanf(ptr,"%d", &value);
+	Node* root = createNode(value);
+	Node* temp = root;
+	for(int i = 1; i < n;i++)
+	{
+		//cin >> value;
+		fscanf(ptr,"%d", &value);
+		temp = addElement(temp,value);
+	}
+	PrintLinkList(root);
+	return 0;
+}
